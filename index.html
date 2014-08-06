@@ -48,7 +48,9 @@
                 var $translator = {};
                 function waitForLoad() {
                     if (window.jQuery === undefined || window.ko === undefined) {
-                        waitForLoad();
+                        setTimeout(function () {
+                            waitForLoad();
+                        },100);
                         return;
                     }
                     $translator.startMode = ko.observable('E');
