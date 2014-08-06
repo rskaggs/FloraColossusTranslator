@@ -96,6 +96,11 @@
                     $translator.startMode.subscribe(function () {
                         $translator.english('');
                         $translator.floraColossus('');
+                        if ($translator.startMode() === 'E') {
+                            $('textarea.english').focus();
+                        } else {
+                            $('textarea.flora').focus();
+                        }
                     });
                     $translator.english.subscribe(function () {
                         var $trimed = $.trim($translator.english());
