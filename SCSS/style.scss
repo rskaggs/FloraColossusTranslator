@@ -81,6 +81,14 @@ body {
     -o-transition: $transVal;
     transition: $transVal;
 }
+%highlight-disable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 textarea {
     @include transition(.5s, linear, background border);
     border: 1px solid #ccc;
@@ -106,6 +114,7 @@ em {
     font-style: italic;
 }
 .btn {
+    @extend %highlight-disable;
     display: block;
     background: #0072ff;
     color: #fff;
@@ -150,6 +159,7 @@ p {
         }
     }
     a {
+        @extend %highlight-disable;
         width: 50%;
         position:relative;
         z-index: 2;

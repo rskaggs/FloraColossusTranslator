@@ -52,6 +52,14 @@ table {
 body {
   padding: 20px; }
 
+.btn, .toggle-wrap a {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 textarea {
   -webkit-transition: mergeList(background border, "", "0.5s linear");
   -moz-transition: mergeList(background border, "", "0.5s linear");
