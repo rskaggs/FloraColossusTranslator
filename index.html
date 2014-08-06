@@ -1,8 +1,50 @@
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7 no-js"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie10 lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie10 lt-ie9 no-js"> <![endif]-->
+<!--[if IE 9]>         <html class="lt-ie10 no-js"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-    </head>
+        <title>Flora Colossus to English Translator</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+        <script>
+            (function () {
+                var $html = document.getElementsByTagName('html')[0],
+                    js = document.createElement('script'),
+                    $head = $html.getElementsByTagName('head')[0];
 
+                if ($html.className.split('lt-IE9').length > 1) {
+                    js.src = '/js/jquery-1.11.1.js';
+                } else {
+                    js.src = '/js/jquery-2.1.1.js';
+                }
+                $head.appendChild(js);
+                js = document.createElement('script');
+                js.src = '/js/knockout-3.1.0.js';
+                $head.appendChild(js);
+            })();
+        </script>
+    </head>
     <body>
-        Init.
+        <noscript>
+            I hate sites that don't work without JavaScript. But I hate paying for hosting more. So I have a JS requirement.
+        </noscript>
+        <div class="">
+            <textarea placeholder="English Language">
+            </textarea>
+            <div class="toggle-wrap">
+                <a>English to Flora Colossus</a>
+                <a>Flora Colossus to English</a>
+            </div>
+            <textarea placeholder="Flora Colossus Language">
+            </textarea>
+            <a class="btn">
+                Translate
+            </a>
+        </div>
+        <script>
+            k
+        </script>
     </body>
 </html>
