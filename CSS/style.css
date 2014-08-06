@@ -91,6 +91,9 @@ textarea {
   text-align: center;
   margin: 20px 0; }
 
+.wrap {
+  max-width: 800px; }
+
 .toggle-wrap {
   display: table;
   position: relative;
@@ -98,10 +101,10 @@ textarea {
   width: 100%;
   margin: 20px 0; }
   .toggle-wrap:before {
-    -webkit-transition: left 0.5s ease-in;
-    -moz-transition: left 0.5s ease-in;
-    -o-transition: left 0.5s ease-in;
-    transition: left 0.5s ease-in;
+    -webkit-transition: left 0.25s ease-in;
+    -moz-transition: left 0.25s ease-in;
+    -o-transition: left 0.25s ease-in;
+    transition: left 0.25s ease-in;
     background: #0072ff;
     content: '';
     position: absolute;
@@ -116,7 +119,7 @@ textarea {
     position: relative;
     z-index: 2;
     display: table-cell;
-    padding: 10px 0;
+    padding: 10px;
     border-box: 1px solid #ccc;
     text-align: center;
     color: #fff; }
