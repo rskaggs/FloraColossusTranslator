@@ -53,6 +53,7 @@ body {
   padding: 20px; }
 
 .btn, .toggle-wrap a {
+  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

@@ -82,6 +82,7 @@ body {
     transition: $transVal;
 }
 %highlight-disable {
+    cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
