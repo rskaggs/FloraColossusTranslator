@@ -68,18 +68,22 @@ textarea {
   display: block; }
   textarea::-webkit-input-placeholder {
     color: #000;
-    font-size: 14px; }
+    font-size: 14px;
+    font-style: italic; }
   textarea:-moz-placeholder {
     /* Firefox 18- */
     color: #000;
-    font-size: 14px; }
+    font-size: 14px;
+    font-style: italic; }
   textarea::-moz-placeholder {
     /* Firefox 19+ */
     color: #000;
-    font-size: 14px; }
+    font-size: 14px;
+    font-style: italic; }
   textarea:-ms-input-placeholder {
     color: #000;
-    font-size: 14px; }
+    font-size: 14px;
+    font-style: italic; }
   textarea[disabled] {
     background: #d6e8ff;
     border: 1px solid #0072ff; }
@@ -98,11 +102,14 @@ textarea {
 
 h1 {
   font-size: 40px;
-  margin: 40px 0; }
+  margin: 40px 0;
+  text-align: center;
+  font-weight: 600; }
 
 p {
-  padding: 20px 0;
-  line-height: 1.5; }
+  margin: 20px 0;
+  line-height: 1.5;
+  font-weight: 300; }
 
 .toggle-wrap {
   display: table;

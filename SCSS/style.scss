@@ -95,6 +95,7 @@ textarea {
     @include placeholder {
         color: #000;
         font-size: 14px;
+        font-style: italic;
     }
     &[disabled] {
         background: lighten(#0072ff, 42%);
@@ -116,10 +117,13 @@ textarea {
 h1 {
     font-size: 40px;
     margin: 40px 0;
+    text-align: center;
+    font-weight: 600;
 }
 p {
-    padding: 20px 0;
+    margin: 20px 0;
     line-height: 1.5;
+    font-weight: 300;
 }
 .toggle-wrap {
     display: table;
