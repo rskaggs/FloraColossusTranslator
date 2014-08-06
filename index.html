@@ -96,11 +96,14 @@
                     $translator.startMode.subscribe(function () {
                         $translator.english('');
                         $translator.floraColossus('');
-                        if ($translator.startMode() === 'E') {
-                            $('textarea.english').focus();
-                        } else {
-                            $('textarea.flora').focus();
-                        }
+                        setTimeout(function () {
+
+                            if ($translator.startMode() === 'E') {
+                                $('textarea.english').focus();
+                            } else {
+                                $('textarea.flora').focus();
+                            }
+                        }, 100);
                     });
                     $translator.english.subscribe(function () {
                         var $trimed = $.trim($translator.english());
@@ -116,7 +119,6 @@
                     });
                     $translator.translate = function () {
                         var $punctuation = '.', $saying = $translator.floraOptions[Math.floor(Math.random() * ($translator.floraOptions.length))];
-                        console.info('hit');
                         if ($translator.startMode() === 'E') {
                             if ($translator.english().length > 0) {
                                 if ($translator.floraColossus().length % 2 === 0 ) {
