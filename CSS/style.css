@@ -62,7 +62,7 @@ textarea {
   height: 100px;
   resize: none;
   outline: none;
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px;
   background: #fff;
   display: block; }
@@ -87,6 +87,9 @@ textarea {
   textarea[disabled] {
     background: #d6e8ff;
     border: 1px solid #0072ff; }
+
+em {
+  font-style: italic; }
 
 .btn {
   display: block;
