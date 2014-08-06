@@ -69,6 +69,7 @@ textarea {
   -o-transition: mergeList(background border, "", "0.5s linear");
   transition: mergeList(background border, "", "0.5s linear");
   border: 1px solid #ccbba2;
+  border-radius: 5px;
   width: 100%;
   height: 100px;
   resize: none;
@@ -108,7 +109,8 @@ em {
   color: #fffbf2;
   padding: 20px;
   text-align: center;
-  margin: 20px 0; }
+  margin: 20px 0;
+  border-radius: 5px; }
 
 .wrap {
   max-width: 800px;
@@ -129,8 +131,10 @@ p {
   display: table;
   position: relative;
   background: #ccbba2;
+  overflow: hidden;
   width: 100%;
-  margin: 20px 0; }
+  margin: 20px 0;
+  border-radius: 5px; }
   .toggle-wrap:before {
     -webkit-transition: left 0.25s ease-in;
     -moz-transition: left 0.25s ease-in;
