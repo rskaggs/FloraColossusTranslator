@@ -84,16 +84,16 @@ textarea {
     position: relative;
     background: #bbb;
     width: 100%;
-    margin: 20px;
+    margin: 20px 0;
     &:before {
         @include transition(.25s, ease-in, border);
+        background: #0072ff;
         content: '';
         position: absolute;
         left: 0;
         top: 0;
         bottom: 0;
         width: 50%;
-        background: #0072ff;
     }
     &.-reverse {
         &:before {
