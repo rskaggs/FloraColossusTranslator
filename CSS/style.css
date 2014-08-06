@@ -74,10 +74,10 @@ textarea {
   width: 100%;
   margin: 20px 0; }
   .toggle-wrap:before {
-    -webkit-transition: border 0.25s ease-in;
-    -moz-transition: border 0.25s ease-in;
-    -o-transition: border 0.25s ease-in;
-    transition: border 0.25s ease-in;
+    -webkit-transition: left 0.5s ease-in;
+    -moz-transition: left 0.5s ease-in;
+    -o-transition: left 0.5s ease-in;
+    transition: left 0.5s ease-in;
     background: #0072ff;
     content: '';
     position: absolute;
@@ -88,10 +88,6 @@ textarea {
   .toggle-wrap.-reverse:before {
     left: 50%; }
   .toggle-wrap a {
-    -webkit-transition: border 0.25s linear;
-    -moz-transition: border 0.25s linear;
-    -o-transition: border 0.25s linear;
-    transition: border 0.25s linear;
     width: 50%;
     position: relative;
     z-index: 2;

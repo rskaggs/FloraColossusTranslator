@@ -86,7 +86,7 @@ textarea {
     width: 100%;
     margin: 20px 0;
     &:before {
-        @include transition(.25s, ease-in, border);
+        @include transition(.5s, ease-in, left);
         background: #0072ff;
         content: '';
         position: absolute;
@@ -101,7 +101,6 @@ textarea {
         }
     }
     a {
-        @include transition(.25s, linear, border);
         width: 50%;
         position:relative;
         z-index: 2;
