@@ -33,7 +33,7 @@
             I hate sites that don't work without JavaScript. But I hate paying for hosting more. So I have a JS requirement.
         </noscript>
         <div class="">
-            <textarea placeholder="English Language" data-bind="value:english, disable: startMode()==='F'"></textarea>
+            <textarea data-bind="value:english, disable: startMode()==='F', attr:{'placeholder': englishPlaceholder}"></textarea>
             <div class="toggle-wrap" data-bind="css: {'-reverse': startMode()==='F'}">
                 <a data-bind="click: function () {
                     startMode('E')
@@ -42,7 +42,7 @@
                     startMode('F')
                 }">Flora Colossus to English</a>
             </div>
-            <textarea placeholder="Flora Colossus Language" data-bind="value:floraColossus, disable: startMode()==='E'"></textarea>
+            <textarea data-bind="value:floraColossus, disable: startMode()==='E', attr:{'placeholder': floraPlaceholder}"></textarea>
             <a class="btn" data-bind="click:translate">Translate</a>
         </div>
         <script>
@@ -58,6 +58,18 @@
                     $translator.startMode = ko.observable('E');
                     $translator.english = ko.observable('');
                     $translator.floraColossus = ko.observable('');
+                    $translator.floraPlaceholder = ko.computed(function () {
+                        if ($translator.startMode() === 'E') {
+                            return 'Please enter English text and Press the translate button.';
+                        }
+                        return 'Please enter some of the Flora Colossus language and press the translate button to see the English translation.';
+                    });
+                    $translator.englishPlaceholder = ko.computed(function () {
+                        if ($translator.startMode() === 'E') {
+                            return 'Please enter Flora Colossus text and Press the translate button.';
+                        }
+                        return 'Please enter some of the English language and press the translate button to see the Flora Colossus translation.';
+                    });
                     $translator.floraOptions = [
                         "Flower Power Activate!",
                         "I have to be careful when I sleep. Cosmo sometimes mistakes my leg for a tree trunk.",

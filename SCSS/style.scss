@@ -59,8 +59,9 @@ textarea {
     resize:none;
     outline: none;
     font-size: 20px;
-    [disabled] {
-        background: lighten(#0072ff, 80%); 
+    padding: 10px;
+    &[disabled] {
+        background: lighten(#0072ff, 80%);
     }
 }
 .btn {
