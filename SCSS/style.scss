@@ -93,6 +93,7 @@ textarea {
         color: #ccc;
         border: 1px solid #ccc;
         @include transition(.25s, linear, border);
+        background: #fff;
         &:before {
             content: '';
             border: 10px solid transparent;

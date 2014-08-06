@@ -83,7 +83,8 @@ textarea {
     -webkit-transition: border 0.25s linear;
     -moz-transition: border 0.25s linear;
     -o-transition: border 0.25s linear;
-    transition: border 0.25s linear; }
+    transition: border 0.25s linear;
+    background: #fff; }
     .toggle-wrap a:before {
       content: '';
       border: 10px solid transparent;
