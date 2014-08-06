@@ -52,10 +52,13 @@ table {
 
 $white: #fffbf2;
 //$highlight: #0072ff;
+$gray: #ccbba2;
 $highlight: #8bb835;
+$text: #332500;
 body {
     padding: 20px;
     background: $white;
+    color: $text;
 }
 @mixin placeholder {
 	&::-webkit-input-placeholder {
@@ -97,7 +100,7 @@ body {
 }
 textarea {
     @include transition(.5s, linear, background border);
-    border: 1px solid #ccc;
+    border: 1px solid $gray;
     width: 100%;
     height: 100px;
     resize:none;
@@ -107,7 +110,7 @@ textarea {
     background: $white;
     display: block;
     @include placeholder {
-        color: #000;
+        color: $text;
         font-size: 14px;
         font-style: italic;
     }
@@ -171,7 +174,7 @@ p {
         z-index: 2;
         display: table-cell;
         padding: 10px;
-        border-box: 1px solid #ccc;
+        border-box: 1px solid $gray;
         text-align: center;
         color: $white;
     }

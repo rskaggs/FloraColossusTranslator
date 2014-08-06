@@ -51,7 +51,8 @@ table {
 
 body {
   padding: 20px;
-  background: #fffbf2; }
+  background: #fffbf2;
+  color: #332500; }
 
 .btn, .toggle-wrap a {
   cursor: pointer;
@@ -67,7 +68,7 @@ textarea {
   -moz-transition: mergeList(background border, "", "0.5s linear");
   -o-transition: mergeList(background border, "", "0.5s linear");
   transition: mergeList(background border, "", "0.5s linear");
-  border: 1px solid #ccc;
+  border: 1px solid #ccbba2;
   width: 100%;
   height: 100px;
   resize: none;
@@ -77,21 +78,21 @@ textarea {
   background: #fffbf2;
   display: block; }
   textarea::-webkit-input-placeholder {
-    color: #000;
+    color: #332500;
     font-size: 14px;
     font-style: italic; }
   textarea:-moz-placeholder {
     /* Firefox 18- */
-    color: #000;
+    color: #332500;
     font-size: 14px;
     font-style: italic; }
   textarea::-moz-placeholder {
     /* Firefox 19+ */
-    color: #000;
+    color: #332500;
     font-size: 14px;
     font-style: italic; }
   textarea:-ms-input-placeholder {
-    color: #000;
+    color: #332500;
     font-size: 14px;
     font-style: italic; }
   textarea[disabled] {
@@ -150,6 +151,6 @@ p {
     z-index: 2;
     display: table-cell;
     padding: 10px;
-    border-box: 1px solid #ccc;
+    border-box: 1px solid #ccbba2;
     text-align: center;
     color: #fffbf2; }
