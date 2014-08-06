@@ -119,7 +119,7 @@ textarea {
                 border-bottom: 10px solid #ccc;
                 border-top: none;
             }
-            &.-active {
+            &.-active:before{
                 border-bottom: 10px solid #0072ff;
                 border-top: none;
             }
