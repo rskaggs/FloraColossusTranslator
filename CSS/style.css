@@ -84,9 +84,9 @@ textarea {
       border-top: 10px solid #ccc;
       border-bottom: none;
       position: absolute;
-      top: 20px;
+      top: 10px;
       left: 50%;
-      margin-right: -25px; }
+      margin-left: -25px; }
     .toggle-wrap a.-active {
       background: #0072ff;
       color: #fff;

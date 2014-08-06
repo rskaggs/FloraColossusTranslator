@@ -35,10 +35,10 @@
         <div class="">
             <textarea placeholder="English Language" data-bind="value:english"></textarea>
             <div class="toggle-wrap">
-                <a data-bind="click: function () {
+                <a data-bind="css: {'-active': startMode()==='F'}, click: function () {
                     startMode('E')
                 }">English to Flora Colossus</a>
-                <a data-bind="click: function () {
+                <a data-bind="css: {'-active': startMode()==='F'}, click: function () {
                     startMode('F')
                 }">Flora Colossus to English</a>
             </div>
