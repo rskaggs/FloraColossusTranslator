@@ -67,6 +67,18 @@ textarea {
     text-align: center;
     margin: 20px 0;
 }
+@mixin transition($speed, $type:linear, $target:all) {
+	$transVal: null;
+	@if length($target) > 1 {
+		$transVal: mergeList($target, '', '#{$speed} #{$type}');
+	} @else {
+		$transVal: $target $speed $type;
+	}
+	-webkit-transition: $transVal;
+	-moz-transition: $transVal;
+	-o-transition: $transVal;
+	transition: $transVal;
+}
 .toggle-wrap {
     width: 50px;
     height: 50px;
@@ -80,15 +92,17 @@ textarea {
         position: relative;
         color: #ccc;
         border: 1px solid #ccc;
+        @include transition(.25s, linear, border);
         &:before {
             content: '';
             border: 10px solid transparent;
+            @include transition(.25s, linear, border);
             border-top: 10px solid #ccc;
             border-bottom: none;
             position: absolute;
             top: 10px;
             left: 50%;
-            margin-left: -25px;
+            margin-left: -10px;
         }
         &.-active {
             background: #0072ff;

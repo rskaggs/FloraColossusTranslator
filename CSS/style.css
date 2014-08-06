@@ -79,16 +79,24 @@ textarea {
     text-indent: 100%;
     position: relative;
     color: #ccc;
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    -webkit-transition: border 0.25s linear;
+    -moz-transition: border 0.25s linear;
+    -o-transition: border 0.25s linear;
+    transition: border 0.25s linear; }
     .toggle-wrap a:before {
       content: '';
       border: 10px solid transparent;
+      -webkit-transition: border 0.25s linear;
+      -moz-transition: border 0.25s linear;
+      -o-transition: border 0.25s linear;
+      transition: border 0.25s linear;
       border-top: 10px solid #ccc;
       border-bottom: none;
       position: absolute;
       top: 10px;
       left: 50%;
-      margin-left: -25px; }
+      margin-left: -10px; }
     .toggle-wrap a.-active {
       background: #0072ff;
       color: #fff;
