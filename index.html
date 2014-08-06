@@ -31,20 +31,71 @@
             I hate sites that don't work without JavaScript. But I hate paying for hosting more. So I have a JS requirement.
         </noscript>
         <div class="">
-            <textarea placeholder="English Language">
-            </textarea>
+            <textarea placeholder="English Language" data-bind="value:english"></textarea>
             <div class="toggle-wrap">
-                <a>English to Flora Colossus</a>
-                <a>Flora Colossus to English</a>
+                <a data-bind="function () {
+                    startMode('E')
+                }">English to Flora Colossus</a>
+                <a data-bind="function () {
+                    startMode('F')
+                }">Flora Colossus to English</a>
             </div>
-            <textarea placeholder="Flora Colossus Language">
-            </textarea>
-            <a class="btn">
-                Translate
-            </a>
+            <textarea placeholder="Flora Colossus Language" data-bind="value:floraColossus"></textarea>
+            <a class="btn" data-bind="click:translate">Translate</a>
         </div>
         <script>
-            k
+            (function () {
+                var $translator = {};
+                $translator.startMode = ko.observable('E');
+                $translator.english = ko.observable('');
+                $translator.floraColossus = ko.observable('');
+                $translator.floraOptions = [
+                    "Flower Power Activate!",
+                    "I have to be careful when I sleep. Cosmo sometimes mistakes my leg for a tree trunk.",
+                    "I think you may be barking up the wrong tree.",
+                    "I have no idea who Jackson Pollock is, but apparently he decorated my room.",
+                    "Why does no one understand what I am saying?",
+                    "Whereever you go in life, never forget your roots.",
+                    "Anyone need a toothpick?",
+                    "What was that? I wasn't listening.",
+                    "My name isn't Groot.",
+                    "Sometimes I don't know why I bother saying anything at all."
+                ];
+                $translator.english.subscribe(function () {
+                    var $trimed = $.trim($translator.english());
+                    if ($trimed !== $translator.english()) {
+                        $translator.english($trimed);
+                    }
+                });
+                $translator.floraColossus.subscribe(function () {
+                    var $trimed = $.trim($translator.floraColossus());
+                    if ($trimed !== $translator.floraColossus()) {
+                        $translator.floraColossus($trimed);
+                    }
+                });
+                $translator.translate = function () {
+                    var $punctuation = '.', $saying = $translator.floraOptions[Math.floor(Math.random() * ($translator.floraOptions.length))];
+                    if ($translator.startMode() === 'E') {
+                        if ($translator.english().length > 0) {
+                            if ($translator.floraColossus().length % 2 === 0 ) {
+                                $punctuation = '!';
+                            }
+                            $translator.floraColossus('I am Groot' + $punctuation);
+                        }
+                        return;
+                    }
+                    if (
+                        $translator.floraColossus().toLowerCase() === 'i am groot' ||
+                        $translator.floraColossus().toLowerCase() === 'i am groot.'||
+                        $translator.floraColossus().toLowerCase() === 'i am groot!'||
+                        $translator.floraColossus().toLowerCase() === 'i am groot?'
+                    ) {
+                        $translator.english($saying);
+                    } else {
+                        $translator.english('Error... Phrase not recognized as part of the Flora Colossus language').
+                    }
+                }
+            })();
         </script>
     </body>
 </html>
