@@ -110,5 +110,5 @@ textarea {
         border-bottom: 10px solid #ccc;
         border-top: none; }
       .toggle-wrap a:first-child.-active:before {
-        border-bottom: 10px solid #0072ff;
+        border-bottom: 10px solid #fff;
         border-top: none; }
