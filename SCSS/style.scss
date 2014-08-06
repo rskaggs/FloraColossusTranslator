@@ -55,6 +55,7 @@ $white: #fffbf2;
 $highlight: #8bb835;
 body {
     padding: 20px;
+    background: $white;
 }
 @mixin placeholder {
 	&::-webkit-input-placeholder {

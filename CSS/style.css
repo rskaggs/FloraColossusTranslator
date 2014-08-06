@@ -50,7 +50,8 @@ table {
   border-spacing: 0; }
 
 body {
-  padding: 20px; }
+  padding: 20px;
+  background: #fffbf2; }
 
 .btn, .toggle-wrap a {
   cursor: pointer;
