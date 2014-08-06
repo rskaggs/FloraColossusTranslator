@@ -1,102 +1,68 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+Syntax error: Undefined variable: "$white".
+        on line 93 of SCSS/style.scss
+
+88:     height: 100px;
+89:     resize:none;
+90:     outline: none;
+91:     font-size: 20px;
+92:     padding: 10px;
+93:     background: $white;
+94:     @include placeholder {
+95:         color: #000;
+96:     }
+97:     &[disabled] {
+98:         background: lighten(#0072ff, 42%);
+
+Backtrace:
+SCSS/style.scss:93
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:366:in `visit_prop'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/stack.rb:79:in `block in with_base'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/stack.rb:121:in `with_frame'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/stack.rb:79:in `with_base'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:389:in `block (2 levels) in visit_rule'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:389:in `map'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:389:in `block in visit_rule'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/stack.rb:79:in `block in with_base'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/stack.rb:121:in `with_frame'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/stack.rb:79:in `with_base'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/tree/root_node.rb:20:in `render'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/engine.rb:274:in `render'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `each'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:462:in `on_file_changed'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:324:in `block in watch'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:135:in `call'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:135:in `block in _wait_for_changes'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:130:in `loop'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:130:in `_wait_for_changes'
+/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:40:in `block in start'
 */
-* {
-  box-sizing: border-box; }
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1.25;
-  font-family: 'Open Sans'; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  padding: 20px; }
-
-textarea {
-  border: 1px solid #ccc;
-  width: 100%;
-  height: 100px;
-  resize: none;
-  outline: none;
-  font-size: 20px;
-  padding: 10px; }
-  textarea[disabled] {
-    background: #d6e8ff; }
-
-.btn {
-  display: block;
-  background: #0072ff;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin: 20px 0; }
-
-.toggle-wrap {
-  display: table;
-  position: relative;
-  background: #bbb;
-  width: 100%;
-  margin: 20px 0; }
-  .toggle-wrap:before {
-    -webkit-transition: left 0.5s ease-in;
-    -moz-transition: left 0.5s ease-in;
-    -o-transition: left 0.5s ease-in;
-    transition: left 0.5s ease-in;
-    background: #0072ff;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%; }
-  .toggle-wrap.-reverse:before {
-    left: 50%; }
-  .toggle-wrap a {
-    width: 50%;
-    position: relative;
-    z-index: 2;
-    display: table-cell;
-    padding: 10px 0;
-    border-box: 1px solid #ccc;
-    text-align: center;
-    color: #fff; }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$white\".\A         on line 93 of SCSS/style.scss\A \A 88:     height: 100px;\A 89:     resize:none;\A 90:     outline: none;\A 91:     font-size: 20px;\A 92:     padding: 10px;\A 93:     background: $white;\A 94:     @include placeholder {\A 95:         color: #000;\A 96:     }\A 97:     &[disabled] {\A 98:         background: lighten(#0072ff, 42%);"; }
