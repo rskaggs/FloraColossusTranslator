@@ -64,7 +64,8 @@ textarea {
   outline: none;
   font-size: 20px;
   padding: 10px;
-  background: #fff; }
+  background: #fff;
+  display: block; }
   textarea::-webkit-input-placeholder {
     color: #000;
     font-size: 14px; }
@@ -92,7 +93,8 @@ textarea {
   margin: 20px 0; }
 
 .wrap {
-  max-width: 800px; }
+  max-width: 800px;
+  margin: 0 auto; }
 
 h1 {
   font-size: 40px;
