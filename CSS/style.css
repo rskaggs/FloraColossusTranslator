@@ -70,7 +70,9 @@ textarea {
 .toggle-wrap {
   display: table;
   position: relative;
-  background: #999; }
+  background: #999;
+  width: 100%;
+  margin: 20px; }
   .toggle-wrap:before {
     -webkit-transition: border 0.25s ease-in;
     -moz-transition: border 0.25s ease-in;
