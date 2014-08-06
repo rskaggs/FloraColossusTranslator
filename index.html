@@ -15,9 +15,9 @@
                     $head = $html.getElementsByTagName('head')[0];
 
                 if ($html.className.split('lt-IE9').length > 1) {
-                    js.src = 'js/jquery-1.11.1.js';
+                    js.src = 'js/jquery-1.11.1.min.js';
                 } else {
-                    js.src = 'js/jquery-2.1.1.js';
+                    js.src = 'js/jquery-2.1.1.min.js';
                 }
                 $head.appendChild(js);
                 js = document.createElement('script');
