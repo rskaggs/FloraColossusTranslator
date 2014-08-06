@@ -85,6 +85,7 @@ textarea {
     background: #999;
     &:before {
         @include transition(.25s, ease-in, border);
+        content: '';
         position: absolute;
         left: 0;
         top: 0;
@@ -100,6 +101,7 @@ textarea {
         @include transition(.25s, linear, border);
         width: 50%;
         display: table-cell;
+        padding: 10px 0;
         border-box: 1px solid #ccc;
         text-align: center;
         color: #fff;

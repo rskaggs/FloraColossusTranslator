@@ -76,6 +76,7 @@ textarea {
     -moz-transition: border 0.25s ease-in;
     -o-transition: border 0.25s ease-in;
     transition: border 0.25s ease-in;
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -90,6 +91,7 @@ textarea {
     transition: border 0.25s linear;
     width: 50%;
     display: table-cell;
+    padding: 10px 0;
     border-box: 1px solid #ccc;
     text-align: center;
     color: #fff; }
