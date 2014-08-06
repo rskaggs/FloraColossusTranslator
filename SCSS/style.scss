@@ -96,31 +96,31 @@ textarea {
         background: #fff;
         &:before {
             content: '';
-            border: 10px solid transparent;
+            border: 6px solid transparent;
             @include transition(.25s, linear, border);
-            border-top: 10px solid #ccc;
+            border-top: 6px solid #ccc;
             border-bottom: none;
             position: absolute;
             top: 10px;
             left: 50%;
-            margin-left: -10px;
+            margin-left: -6px;
         }
         &.-active {
             background: #0072ff;
             color: #fff;
             border: 1px solid darken(#0072ff, 25%);
             &:before {
-                border-top: 10px solid #0072ff;
+                border-top: 6px solid #fff;
             }
         }
         &:first-child {
             border-radius: 50px 50px 0 0;
             &:before {
-                border-bottom: 10px solid #ccc;
+                border-bottom: 6px solid #ccc;
                 border-top: none;
             }
             &.-active:before{
-                border-bottom: 10px solid #fff;
+                border-bottom: 6px solid #fff;
                 border-top: none;
             }
         }
