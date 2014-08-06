@@ -33,7 +33,7 @@
             I hate sites that don't work without JavaScript. But I hate paying for hosting more. So I have a JS requirement.
         </noscript>
         <div class="">
-            <textarea placeholder="English Language" data-bind="value:english"></textarea>
+            <textarea placeholder="English Language" data-bind="value:english, disable: startMode()==='F'"></textarea>
             <div class="toggle-wrap" data-bind="css: {'-reverse': startMode()==='F'}">
                 <a data-bind="click: function () {
                     startMode('E')
@@ -42,7 +42,7 @@
                     startMode('F')
                 }">Flora Colossus to English</a>
             </div>
-            <textarea placeholder="Flora Colossus Language" data-bind="value:floraColossus"></textarea>
+            <textarea placeholder="Flora Colossus Language" data-bind="value:floraColossus, disable: startMode()==='E'"></textarea>
             <a class="btn" data-bind="click:translate">Translate</a>
         </div>
         <script>
@@ -70,6 +70,10 @@
                         "My name isn't Groot.",
                         "Sometimes I don't know why I bother saying anything at all."
                     ];
+                    translator.startMode.subscribe(function () {
+                        $translator.english('');
+                        $translator.floraColossus('');
+                    });
                     $translator.english.subscribe(function () {
                         var $trimed = $.trim($translator.english());
                         if ($trimed !== $translator.english()) {

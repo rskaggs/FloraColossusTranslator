@@ -58,6 +58,10 @@ textarea {
     height: 100px;
     resize:none;
     outline: none;
+    font-size: 20px;
+    [disabled] {
+        background: lighten(#0072ff, 80%); 
+    }
 }
 .btn {
     display: block;
