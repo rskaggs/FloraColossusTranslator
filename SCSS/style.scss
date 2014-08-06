@@ -103,6 +103,8 @@ textarea {
     a {
         @include transition(.25s, linear, border);
         width: 50%;
+        position:relative;
+        z-index: 2;
         display: table-cell;
         padding: 10px 0;
         border-box: 1px solid #ccc;

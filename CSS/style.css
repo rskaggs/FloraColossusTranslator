@@ -93,6 +93,8 @@ textarea {
     -o-transition: border 0.25s linear;
     transition: border 0.25s linear;
     width: 50%;
+    position: relative;
+    z-index: 2;
     display: table-cell;
     padding: 10px 0;
     border-box: 1px solid #ccc;
