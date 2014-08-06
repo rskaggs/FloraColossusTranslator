@@ -73,7 +73,7 @@ textarea {
   outline: none;
   font-size: 18px;
   padding: 10px;
-  background: #fff;
+  background: #fffbf2;
   display: block; }
   textarea::-webkit-input-placeholder {
     color: #000;
@@ -94,16 +94,16 @@ textarea {
     font-size: 14px;
     font-style: italic; }
   textarea[disabled] {
-    background: #d6e8ff;
-    border: 1px solid #0072ff; }
+    background: #e7f2d1;
+    border: 1px solid #8bb835; }
 
 em {
   font-style: italic; }
 
 .btn {
   display: block;
-  background: #0072ff;
-  color: #fff;
+  background: #8bb835;
+  color: #fffbf2;
   padding: 20px;
   text-align: center;
   margin: 20px 0; }
@@ -134,7 +134,7 @@ p {
     -moz-transition: left 0.25s ease-in;
     -o-transition: left 0.25s ease-in;
     transition: left 0.25s ease-in;
-    background: #0072ff;
+    background: #8bb835;
     content: '';
     position: absolute;
     left: 0;
@@ -151,4 +151,4 @@ p {
     padding: 10px;
     border-box: 1px solid #ccc;
     text-align: center;
-    color: #fff; }
+    color: #fffbf2; }

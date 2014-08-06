@@ -49,6 +49,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+$white: #fffbf2;
+//$highlight: #0072ff;
+$highlight: #8bb835;
 body {
     padding: 20px;
 }
@@ -99,7 +103,7 @@ textarea {
     outline: none;
     font-size: 18px;
     padding: 10px;
-    background: #fff;
+    background: $white;
     display: block;
     @include placeholder {
         color: #000;
@@ -107,8 +111,8 @@ textarea {
         font-style: italic;
     }
     &[disabled] {
-        background: lighten(#0072ff, 42%);
-        border: 1px solid #0072ff
+        background: lighten($highlight, 42%);
+        border: 1px solid $highlight
     }
 }
 em {
@@ -117,8 +121,8 @@ em {
 .btn {
     @extend %highlight-disable;
     display: block;
-    background: #0072ff;
-    color: #fff;
+    background: $highlight;
+    color: $white;
     padding: 20px;
     text-align: center;
     margin: 20px 0;
@@ -146,7 +150,7 @@ p {
     margin: 20px 0;
     &:before {
         @include transition(.25s, ease-in, left);
-        background: #0072ff;
+        background: $highlight;
         content: '';
         position: absolute;
         left: 0;
@@ -168,6 +172,6 @@ p {
         padding: 10px;
         border-box: 1px solid #ccc;
         text-align: center;
-        color: #fff;
+        color: $white;
     }
 }
