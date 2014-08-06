@@ -47,7 +47,7 @@
             (function () {
                 var $translator = {};
                 function waitForLoad() {
-                    if (jQuery === undefined || ko === undefined) {
+                    if (window.jQuery === undefined || window.ko === undefined) {
                         waitForLoad();
                         return;
                     }
