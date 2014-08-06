@@ -1,57 +1,95 @@
-/*
-Syntax error: Invalid CSS after "        backgr": expected "{", was "}"
-        on line 107 of SCSS/style.scss
-
-102:         display: table-cell;
-103:         border-box: 1px solid #ccc;
-104:         text-align: center;
-105:         color: #fff;
-106:         backgr
-107:     }
-108: }
-
-Backtrace:
-SCSS/style.scss:107
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1312:in `expected'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1248:in `expected'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1243:in `tok!'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:640:in `block'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:634:in `ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:697:in `block in declaration_or_ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1288:in `call'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1288:in `rethrow'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:698:in `declaration_or_ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:660:in `block_child'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:652:in `block_contents'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:641:in `block'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:634:in `ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:697:in `block in declaration_or_ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1288:in `call'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:1288:in `rethrow'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:698:in `declaration_or_ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:660:in `block_child'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:652:in `block_contents'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:641:in `block'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:634:in `ruleset'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:659:in `block_child'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:652:in `block_contents'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:116:in `stylesheet'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/scss/parser.rb:41:in `parse'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/engine.rb:409:in `_to_tree'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/engine.rb:274:in `render'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `each'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:462:in `on_file_changed'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:324:in `block in watch'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:135:in `call'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:135:in `block in _wait_for_changes'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:130:in `loop'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:130:in `_wait_for_changes'
-/Users/russellskaggs/.rvm/gems/ruby-2.0.0-p247/gems/listen-2.1.0/lib/listen/listener.rb:40:in `block in start'
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"        backgr\": expected \"{\", was \"}\"\A         on line 107 of SCSS/style.scss\A \A 102:         display: table-cell;\A 103:         border-box: 1px solid #ccc;\A 104:         text-align: center;\A 105:         color: #fff;\A 106:         backgr\A 107:     }\A 108: }"; }
+* {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.25;
+  font-family: 'Open Sans'; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  padding: 20px; }
+
+textarea {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  outline: none; }
+
+.btn {
+  display: block;
+  background: #0072ff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0; }
+
+.toggle-wrap {
+  display: table;
+  position: relative;
+  background: #999; }
+  .toggle-wrap:before {
+    -webkit-transition: border 0.25s ease-in;
+    -moz-transition: border 0.25s ease-in;
+    -o-transition: border 0.25s ease-in;
+    transition: border 0.25s ease-in;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%; }
+  .toggle-wrap.-reverse:before {
+    left: 50%; }
+  .toggle-wrap a {
+    -webkit-transition: border 0.25s linear;
+    -moz-transition: border 0.25s linear;
+    -o-transition: border 0.25s linear;
+    transition: border 0.25s linear;
+    width: 50%;
+    display: table-cell;
+    border-box: 1px solid #ccc;
+    text-align: center;
+    color: #fff; }
