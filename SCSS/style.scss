@@ -2,7 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+* {
+    box-sizing: border-box;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,6 +57,7 @@ textarea {
     width: 100%;
     height: 100px;
     resize:none;
+    outline: none;
 }
 .btn {
     display: block;
@@ -69,8 +72,40 @@ textarea {
     height: 50px;
     a {
         border-radius: 0 0 50px 50px;
+        height: 50%;
+        display: block;
+        padding-top: 100%;
+        position: relative;
+        color: #ccc;
+        border: 1px solid #ccc;
+        &:before {
+            content: '';
+            border: 10px solid transparent;
+            border-top: 10px solid #ccc;
+            border-bottom: none;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            margin-right: -25px;
+        }
+        &.-active {
+            background: #0072ff;
+            color: #fff;
+            border: 1px solid darken(#0072ff, 25%);
+            &:before {
+                border-top: 10px solid #0072ff;
+            }
+        }
         &:first-child {
             border-radius: 50px 50px 0 0;
+            &:before {
+                border-bottom: 10px solid #ccc;
+                border-top: none;
+            }
+            &.-active {
+                border-bottom: 10px solid #0072ff;
+                border-top: none;
+            }
         }
     }
 }

@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+* {
+  box-sizing: border-box; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +56,8 @@ textarea {
   border: 1px solid #ccc;
   width: 100%;
   height: 100px;
-  resize: none; }
+  resize: none;
+  outline: none; }
 
 .btn {
   display: block;
@@ -67,6 +71,33 @@ textarea {
   width: 50px;
   height: 50px; }
   .toggle-wrap a {
-    border-radius: 0 0 50px 50px; }
+    border-radius: 0 0 50px 50px;
+    height: 50%;
+    display: block;
+    padding-top: 100%;
+    position: relative;
+    color: #ccc;
+    border: 1px solid #ccc; }
+    .toggle-wrap a:before {
+      content: '';
+      border: 10px solid transparent;
+      border-top: 10px solid #ccc;
+      border-bottom: none;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      margin-right: -25px; }
+    .toggle-wrap a.-active {
+      background: #0072ff;
+      color: #fff;
+      border: 1px solid #003980; }
+      .toggle-wrap a.-active:before {
+        border-top: 10px solid #0072ff; }
     .toggle-wrap a:first-child {
       border-radius: 50px 50px 0 0; }
+      .toggle-wrap a:first-child:before {
+        border-bottom: 10px solid #ccc;
+        border-top: none; }
+      .toggle-wrap a:first-child.-active {
+        border-bottom: 10px solid #0072ff;
+        border-top: none; }
