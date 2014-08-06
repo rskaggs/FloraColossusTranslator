@@ -74,7 +74,9 @@ textarea {
         border-radius: 0 0 50px 50px;
         height: 50%;
         display: block;
-        padding-top: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-indent: 100%;
         position: relative;
         color: #ccc;
         border: 1px solid #ccc;
