@@ -38,7 +38,7 @@
             <p>
                 The time may come when traveling around the galaxy when you run into a Flora Colossus. Not to be mistaken as an Ent of Middle Earth,
                 Flora Colossus are tree-like beings from Planet X, the capital of the branch worlds. Unfortunately for us, their biology makes it difficult
-                for us to always understand what they are saying. Most being simply here the phrase: <em>I am Groot</em>.
+                for us to always understand what they are saying. Most being simply hear the phrase: <em>I am Groot</em>.
             </p>
             <p>
                 Thanks to cutting edge research in the field of Xenolinguistics, we have been able to understand what they are saying to you and in return
@@ -87,11 +87,17 @@
                         "I think you may be barking up the wrong tree.",
                         "I have no idea who Jackson Pollock is, but apparently he decorated my room.",
                         "Why does no one understand what I am saying?",
-                        "Whereever you go in life, never forget your roots.",
+                        "Wherever you go in life, never forget your roots.",
                         "Anyone need a toothpick?",
                         "What was that? I wasn't listening.",
                         "My name isn't Groot.",
-                        "Sometimes I don't know why I bother saying anything at all."
+                        "Sometimes I don't know why I bother.",
+                    ];
+                    $translator.floraOptionsAlt = [
+                        "I would die anyways. But through this you might live.",
+                        "Ok guys, before the impact throw your full weight towards the door. We will roll our way out of this thing.",
+                        "Group hug.",
+                        "There are worse ways to die."
                     ];
                     $translator.startMode.subscribe(function () {
                         $translator.english('');
@@ -118,7 +124,9 @@
                         }
                     });
                     $translator.translate = function () {
-                        var $punctuation = '.', $saying = $translator.floraOptions[Math.floor(Math.random() * ($translator.floraOptions.length))];
+                        var $punctuation = '.',
+                            $saying = $translator.floraOptions[Math.floor(Math.random() * ($translator.floraOptions.length))],
+                            $sayingAlt = $translator.floraOptionsAlt[Math.floor(Math.random() * ($translator.floraOptionsAlt.length))];
                         if ($translator.startMode() === 'E') {
                             if ($translator.english().length > 0) {
                                 if ($translator.floraColossus().length % 2 === 0 ) {
@@ -135,6 +143,13 @@
                             $translator.floraColossus().toLowerCase() === 'i am groot?'
                         ) {
                             $translator.english($saying);
+                        }  else if (
+                            $translator.floraColossus().toLowerCase() === 'we am groot' ||
+                            $translator.floraColossus().toLowerCase() === 'we am groot.'||
+                            $translator.floraColossus().toLowerCase() === 'we am groot!'||
+                            $translator.floraColossus().toLowerCase() === 'we am groot?'
+                        ) {
+                            $translator.english($sayingAlt);
                         } else {
                             $translator.english('Error... Phrase not recognized as part of the Flora Colossus language');
                         }
