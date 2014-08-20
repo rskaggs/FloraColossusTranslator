@@ -1,12 +1,75 @@
-[
-    "Flower Power Activate!",
-    "I have to be careful when I sleep. Cosmo sometimes mistakes my leg for a tree trunk.",
-    "I think you may be barking up the wrong tree.",
-    "I have no idea who Jackson Pollock is, but apparently he decorated my room.",
-    "Why does no one understand what I am saying?",
-    "Whereever you go in life, never forget your roots.",
-    "Anyone need a toothpick?",
-    "What was that? I wasn't listening.",
-    "My name isn't Groot.",
-    "Sometimes I don't know why I bother saying anything at all."
-]
+{
+    "single": {
+        "statement": [
+            "I have to be careful when I sleep. Cosmo sometimes mistakes my leg for a tree trunk.",
+            "I think you may be barking up the wrong tree.",
+            "I have no idea who Jackson Pollock is, but apparently he decorated my room.",
+            "Wherever you go in life, never forget your roots.",
+            "My name isn't Groot.",
+            "Sometimes I don't know why I bother.",
+            "No, I don’t think he really is a Star Lord.",
+            "It is a lot funnier when I say it",
+            "Wouldn’t you like to know.",
+            "I call it human paper.",
+            "If you play it backwards it says Hail Mephisto.",
+            "My bark is worse than my bite.",
+            "Termites cause me ecological horror.",
+            "Standing on my legs keeps me up at night.",
+            "I seem to have soiled myself.",
+            "Please don’t.",
+            "Nobody ever asks me to say something else.",
+            "Eye hammed root.",
+            "I'm really the third Summers brother.",
+            "Technically I am inhuman.",
+            "The Gardener is my personal savior.",
+            "You say lumber yard, I say horrific slaughterhouse.",
+            "I've got wood.",
+            "I want to petal these cute animals.",
+            "The sonic Screwdriver has got nothing on me.",
+            "Sorry I've got to leaf.",
+            "Speak three words and carry a big stick.",
+            "In space nobody understands what you mean.",
+            "Pollination is a totally normal thing we do.",
+            "You should see the space-bees.",
+            "I once punched a dire wraith so hard it became a dismal wraith.",
+            "Yes, I am Starlord's father."
+        ],
+        "exclamation": [
+            "Flower Power Activate!",
+            "TOORG MA I!",
+            "What’s between Thanos’ eyes? Tha-Nose!",
+            "GROOT THERE IT IS!",
+            "Imperius Rex!",
+            "BEHOLD THE DOOM FROM PLANET X!",
+            "It's clobbering' time!",
+            "It is just sap, I promise!"
+        ],
+        "question": [
+            "Why does no one understand what I am saying?",
+            "Anyone need a toothpick?",
+            "What was that? I wasn't listening.",
+            "What’s between Thanos’ eyes? Tha-Nose!",
+            "Want to see my Giant-Sized Man-Thing?",
+            "Why don’t I drink yellow water? I don’t want to get sycamore?",
+            "When is a door not a door? When it's my uncle.",
+            "Remember that time I won the third Secret Wars?",
+            "Do I need to repeat myself?",
+            "Wilt you not forget to call me back?",
+            "If I don't need to eat why do I have a mouth?",
+            "Am I sapling your attention span?"
+        ]
+    },
+    "plural": {
+        "statement": [
+            "I would die anyways. But through this you might live.",
+            "Ok guys, before the impact throw your full weight towards the door. We will roll our way out of this thing.",
+            "There are worse ways to die."
+        ],
+        "exclamation": [
+            "GROUP HUG!"
+        ],
+        "question": [
+            "How do you like my tubmleweed impression?"
+        ]
+    }
+}

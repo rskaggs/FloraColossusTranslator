@@ -95,120 +95,92 @@
                         },100);
                         return;
                     }
-                    $translator.startMode = ko.observable('E');
-                    $translator.english = ko.observable('');
-                    $translator.floraColossus = ko.observable('');
-                    $translator.floraPlaceholder = ko.computed(function () {
-                        if ($translator.startMode() === 'E') {
-                            return 'Please enter English text and Press the translate button.';
-                        }
-                        return 'Please enter some of the Flora Colossus language and press the translate button to see the English translation.';
-                    });
-                    $translator.englishPlaceholder = ko.computed(function () {
-                        if ($translator.startMode() === 'F') {
-                            return 'Please enter Flora Colossus text and Press the translate button.';
-                        }
-                        return 'Please enter some of the English language and press the translate button to see the Flora Colossus translation.';
-                    });
-                    $translator.floraOptions = [
-                        "Flower Power Activate!",
-                        "I have to be careful when I sleep. Cosmo sometimes mistakes my leg for a tree trunk.",
-                        "I think you may be barking up the wrong tree.",
-                        "I have no idea who Jackson Pollock is, but apparently he decorated my room.",
-                        "Why does no one understand what I am saying?",
-                        "Wherever you go in life, never forget your roots.",
-                        "Anyone need a toothpick?",
-                        "What was that? I wasn't listening.",
-                        "My name isn't Groot.",
-                        "Sometimes I don't know why I bother.",
-
-                        ////
-
-                        "No, I don’t think he really is a Star Lord.",
-                        "It is a lot funnier when I say it",
-                        "Wouldn’t you like to know.",
-                        "I call it human paper.",
-                        "TOORG MA I!",
-                        "If you play it backwards it says Hail Mephisto.",
-                        "What’s between Thanos’ eyes? Tha-Nose!",
-                        "Want to see my Giant-Sized Man-Thing?",
-                        "My bark is worse than my bite.",
-                        "Termites cause me ecological horror.",
-                        "Standing on my legs keeps me up at night.",
-                        "I seem to have soiled myself.",
-                        "GROOT THERE IT IS!",
-                        "Why don’t I drink yellow water? I don’t want to get sycamore?",
-                        "Imperius Rex!",
-                        "Please don’t.",
-                        "Do I need to repeat myself?",
-                        "Nobody ever asks me to say something else.",
-                        "Eye hammed root."
-
-                    ];
-                    $translator.floraOptionsAlt = [
-                        "I would die anyways. But through this you might live.",
-                        "Ok guys, before the impact throw your full weight towards the door. We will roll our way out of this thing.",
-                        "Group hug.",
-                        "There are worse ways to die."
-                    ];
-                    $translator.startMode.subscribe(function () {
-                        $translator.english('');
-                        $translator.floraColossus('');
-                        setTimeout(function () {
-                            if ($translator.startMode() === 'E') {
-                                $('textarea.english').focus();
-                            } else {
-                                $('textarea.flora').focus();
-                            }
-                        }, 100);
-                    });
-                    $translator.english.subscribe(function () {
-                        var $trimed = $.trim($translator.english());
-                        if ($trimed !== $translator.english()) {
-                            $translator.english($trimed);
-                        }
-                    });
-                    $translator.floraColossus.subscribe(function () {
-                        var $trimed = $.trim($translator.floraColossus());
-                        if ($trimed !== $translator.floraColossus()) {
-                            $translator.floraColossus($trimed);
-                        }
-                    });
-                    $translator.translate = function () {
-                        var $punctuation = '.',
-                            $saying = $translator.floraOptions[Math.floor(Math.random() * ($translator.floraOptions.length))],
-                            $sayingAlt = $translator.floraOptionsAlt[Math.floor(Math.random() * ($translator.floraOptionsAlt.length))];
-                        if ($translator.startMode() === 'E') {
-                            if ($translator.english().length > 0) {
-                                if ($translator.floraColossus().length % 2 === 0 ) {
-                                    $punctuation = '!';
-                                }
-                                $translator.floraColossus('I am Groot' + $punctuation);
-                            }
-                            return;
-                        }
-                        if (
-                            $translator.floraColossus().toLowerCase() === 'i am groot' ||
-                            $translator.floraColossus().toLowerCase() === 'i am groot.'||
-                            $translator.floraColossus().toLowerCase() === 'i am groot!'||
-                            $translator.floraColossus().toLowerCase() === 'i am groot?'
-                        ) {
-                            $translator.english($saying);
-                        }  else if (
-                            $translator.floraColossus().toLowerCase() === 'we are groot' ||
-                            $translator.floraColossus().toLowerCase() === 'we are groot.'||
-                            $translator.floraColossus().toLowerCase() === 'we are groot!'||
-                            $translator.floraColossus().toLowerCase() === 'we are groot?'
-                        ) {
-                            $translator.english($sayingAlt);
-                        } else {
-                            $translator.english('Error... Phrase not recognized as part of the Flora Colossus language');
-                        }
+                    function randomResult($array) {
+                        return $array[Math.floor(Math.random() * ($array.length))];
                     }
-                    ko.applyBindings($translator);
-                    setTimeout(function () {
-                        $('textarea.english').focus();
+                    $.get( "json/groot.json", function( groot ) {
+                        $translator.startMode = ko.observable('E');
+                        $translator.english = ko.observable('');
+                        $translator.floraColossus = ko.observable('');
+                        $translator.floraPlaceholder = ko.computed(function () {
+                            if ($translator.startMode() === 'E') {
+                                return 'Please enter English text and Press the translate button.';
+                            }
+                            return 'Please enter some of the Flora Colossus language and press the translate button to see the English translation.';
+                        });
+                        $translator.englishPlaceholder = ko.computed(function () {
+                            if ($translator.startMode() === 'F') {
+                                return 'Please enter Flora Colossus text and Press the translate button.';
+                            }
+                            return 'Please enter some of the English language and press the translate button to see the Flora Colossus translation.';
+                        });
+                        $translator.startMode.subscribe(function () {
+                            $translator.english('');
+                            $translator.floraColossus('');
+                            setTimeout(function () {
+                                if ($translator.startMode() === 'E') {
+                                    $('textarea.english').focus();
+                                } else {
+                                    $('textarea.flora').focus();
+                                }
+                            }, 100);
+                        });
+                        $translator.english.subscribe(function () {
+                            var $trimed = $.trim($translator.english());
+                            if ($trimed !== $translator.english()) {
+                                $translator.english($trimed);
+                            }
+                        });
+                        $translator.floraColossus.subscribe(function () {
+                            var $trimed = $.trim($translator.floraColossus());
+                            if ($trimed !== $translator.floraColossus()) {
+                                $translator.floraColossus($trimed);
+                            }
+                        });
+
+                        $translator.translate = function () {
+                            var $punctuation = '.';
+                            if ($translator.startMode() === 'E') {
+                                if ($translator.english().length > 0) {
+                                    if ($translator.floraColossus().length % 2 === 0 ) {
+                                        $punctuation = '!';
+                                    }
+                                    $translator.floraColossus('I am Groot' + $punctuation);
+                                }
+                                return;
+                            }
+                            switch($translator.floraColossus().toLowerCase()) {
+                                case 'i am groot':
+                                case 'i am groot.':
+                                    $translator.english(randomResult(groot.single.statement));
+                                    break;
+                                case 'i am groot!':
+                                    $translator.english(randomResult(groot.single.exclamation));
+                                    break;
+                                case 'i am groot?':
+                                    $translator.english(randomResult(groot.single.question));
+                                    break;
+                                case 'we are groot':
+                                case 'we are groot.':
+                                    $translator.english(randomResult(groot.plural.statement));
+                                    break;
+                                case 'we are groot!':
+                                    $translator.english(randomResult(groot.plural.exclamation));
+                                    break;
+                                case 'we are groot?':
+                                    $translator.english(randomResult(groot.plural.question));
+                                    break;
+                                default:
+                                    $translator.english('Error... Phrase not recognized as part of the Flora Colossus language');
+                                    break;
+                            }
+                        }
+                        ko.applyBindings($translator);
+                        setTimeout(function () {
+                            $('textarea.english').focus();
+                        });
                     });
+
                 }
                 waitForLoad();
             })();
